@@ -1,20 +1,29 @@
 name: bookly
-description: A Book Display Application that allows displaying book details and all information related to it, with the ability to search for a specific book.
-publish_to: "none" 
+description: A Book Display Application that allows displaying book details and
+  all information related to it, with the ability to search for a specific book.
+publish_to: "none"
 version: 1.0.0+1
 environment:
   sdk: ">=3.0.2 <4.0.0"
 dependencies:
-  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
   font_awesome_flutter: ^10.4.0
+  cupertino_icons: ^1.0.2
   google_fonts: ^5.0.0
-  go_router: ^8.1.0
+  flutter_bloc: ^8.1.3
   equatable: ^2.0.5
+  go_router: ^8.1.0
+  dartz: ^0.10.1
+  dio: ^5.2.1+1
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0
+flutter_launcher_icons:
+  android: "launcher_icon"
+  image_path: "assets/images/book.png"
+  ios: true
   flutter_test:
     sdk: flutter
 flutter:
