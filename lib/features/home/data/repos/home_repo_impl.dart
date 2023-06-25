@@ -17,13 +17,18 @@ class HomeRepoImpl implements HomeRepo {
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
       }
+
       return right(books);
     } catch (e) {
       if (e is DioException) {
-        return left(ServerFailure.fromDioException(e));
+        return left(
+          ServerFailure.fromDioException(e),
+        );
       }
       return left(
-        ServerFailure(e.toString()),
+        ServerFailure(
+          e.toString(),
+        ),
       );
     }
   }
