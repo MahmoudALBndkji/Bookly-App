@@ -1,3 +1,4 @@
+import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/widgets/custom_error_widget.dart';
 import 'package:bookly/core/widgets/custom_loding_indicator.dart';
 import 'package:bookly/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
@@ -24,7 +25,7 @@ class SimilarBooksListView extends StatelessWidget {
                   child: CustomBookImage(
                     imageUrl:
                         state.books[index].volumeInfo!.imageLinks?.thumbnail ??
-                            '',
+                            AssetsData.defaultImage,
                   ),
                 );
               },

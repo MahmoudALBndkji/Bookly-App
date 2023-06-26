@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:bookly/features/home/data/repos/home_repo_impl.dart';
-import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 part 'newest_books_state.dart';
 
 
@@ -16,7 +15,7 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
         emit(NewsetBooksFailure(failure.errorMessage));
       },
       (books) {
-        emit(NewsetBooksSuccess(books.cast<BookModel>()));
+        emit(NewsetBooksSuccess(books));
       },
     );
   }
