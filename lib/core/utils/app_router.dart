@@ -24,6 +24,10 @@ abstract class AppRouter {
         builder: (context, state) => const HomeView(),
       ),
       GoRoute(
+        path: kSearchView,
+        builder: (context, state) => const SearchView(),
+      ),
+      GoRoute(
         path: kBookDetailsView,
         builder: (context, state) => BlocProvider(
           create: (context) => SimilarBooksCubit(
@@ -33,10 +37,6 @@ abstract class AppRouter {
             bookModel: state.extra as BookModel,
           ),
         ),
-      ),
-      GoRoute(
-        path: kSearchView,
-        builder: (context, state) => const SearchView(),
       ),
     ],
   );

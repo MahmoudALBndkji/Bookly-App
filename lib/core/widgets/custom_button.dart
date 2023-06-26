@@ -20,26 +20,24 @@ class CustomButton extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 48.0,
-      child: TextButton(
-        style: TextButton.styleFrom(
-          backgroundColor: backgroundColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: borderRadius ?? BorderRadius.circular(12.0),
+  Widget build(BuildContext context) => SizedBox(
+        height: 48.0,
+        child: TextButton(
+          style: TextButton.styleFrom(
+            backgroundColor: backgroundColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: borderRadius ?? BorderRadius.circular(12.0),
+            ),
+          ),
+          onPressed: onPressed,
+          child: Text(
+            text,
+            style: Styles.textStyle18.copyWith(
+              color: textColor,
+              fontWeight: FontWeight.w900,
+              fontSize: fontSize,
+            ),
           ),
         ),
-        onPressed: onPressed,
-        child: Text(
-          text,
-          style: Styles.textStyle18.copyWith(
-            color: textColor,
-            fontWeight: FontWeight.w900,
-            fontSize: fontSize,
-          ),
-        ),
-      ),
-    );
-  }
+      );
 }

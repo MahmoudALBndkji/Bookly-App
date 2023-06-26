@@ -19,11 +19,12 @@ class ServerFailure extends Failure {
         return ServerFailure('Receive timeout with ApiServer');
 
       case DioException.badResponse:
-        return ServerFailure.fromResponse(dioException.response!.statusCode,dioException.response!.data);
+        return ServerFailure.fromResponse(
+            dioException.response!.statusCode, dioException.response!.data);
 
-        case DioException.requestCancelled:
+      case DioException.requestCancelled:
         return ServerFailure('Request to ApiServer was canceld');
-        
+
       default:
         return ServerFailure('Opps There was an Error, Please try again');
     }

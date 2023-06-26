@@ -1,14 +1,15 @@
+import 'package:flutter/material.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly/features/home/presentation/views/widgets/books_action.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_book_image.dart';
-import 'package:flutter/material.dart';
 
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({super.key, required this.bookModel});
   final BookModel bookModel;
+  const BookDetailsSection({super.key, required this.bookModel});
+
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;

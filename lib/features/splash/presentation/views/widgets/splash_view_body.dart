@@ -1,8 +1,8 @@
-import 'package:bookly/core/utils/app_router.dart';
-import 'package:bookly/core/utils/assets.dart';
-import 'package:bookly/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:bookly/core/utils/assets.dart';
+import 'package:bookly/core/utils/app_router.dart';
+import 'package:bookly/features/splash/presentation/views/widgets/sliding_text.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({Key? key}) : super(key: key);
@@ -30,17 +30,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Image.asset(AssetsData.logo),
-        const SizedBox(height: 4.0),
-        SlidingText(slidingAnimation: slidingAnimation),
-      ],
-    );
-  }
+  Widget build(BuildContext context) => Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Image.asset(AssetsData.logo),
+          const SizedBox(height: 4.0),
+          SlidingText(slidingAnimation: slidingAnimation),
+        ],
+      );
 
   void initSlidingAnimation() {
     animationController =
